@@ -1,0 +1,54 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+cache/
+
+# Videos and packaged archives stay outside GitHub
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Download datasets/models at runtime; retain only small provenance manifests
+data/*
+!data/sample_manifest.json
+!data/corpus_manifest.json
+!data/search_manifest.json
+!data/preparation_errors.json
+models/
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.npy
+*.npz
+*.faiss
+*.pkl
+*.pickle
+
+# Large generated predictions and redundant per-question checkpoints
+results/task*/predictions.jsonl
+results/task*/records/
+
+# Report generation uses fonts supplied by the reportlab dependency
+*.ttf
+*.woff
+*.woff2
+
+# Local credentials and operating-system metadata
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
